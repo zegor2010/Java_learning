@@ -37,6 +37,5 @@ public class Person {
         this.address = address;
         this.phone = phone;
         this.email = email;
-
     }
 }

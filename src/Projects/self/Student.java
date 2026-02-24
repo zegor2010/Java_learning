@@ -1,21 +1,16 @@
 package Projects.self;
 
+import java.time.LocalDate;
+
 public class Student {
-    private String surname;
+    public String surname;
     private String name;
     private String middleName;
-    private int yearOfBirth;
+    private String birthDate;
     private String address;
     private String phone;
-    private int faculty;
+    private String faculty;
     private int course;
-    private String[] studentsFaculty1;
-    private String[] studentsFaculty2;
-    private String[] studentsFaculty3;
-    private String[] studentsCourse1;
-    private String[] studentsCourse2;
-    private String[] studentsCourse3;
-    private String[] bornAfter;
 
     public String getSurname() {
         return surname;
@@ -35,11 +30,11 @@ public class Student {
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
-    public int getDateOfBirth() {
-        return yearOfBirth;
+    public String getDateOfBirth() {
+        return birthDate;
     }
-    public void setDateOfBirth(int yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
+    public void setDateOfBirth(String yearOfBirth) {
+        this.birthDate = birthDate;
     }
     public String getAddress() {
         return address;
@@ -53,10 +48,10 @@ public class Student {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public int getFaculty() {
+    public String getFaculty() {
         return faculty;
     }
-    public void setFaculty(int faculty) {
+    public void setFaculty(String faculty) {
         this.faculty = faculty;
     }
     public int getCourse() {
@@ -66,78 +61,16 @@ public class Student {
         this.course = course;
     }
 
-    public Student(int course, int faculty, String phone, String address, int yearOfBirth, String middleName, String name, String surname) {
-        this.course = course;
-        this.faculty = faculty;
-        this.phone = phone;
-        this.address = address;
-        this.yearOfBirth = yearOfBirth;
-        this.middleName = middleName;
-        this.name = name;
+    public Student(String surname, String name, String middleName, String birthDate, String address, String phone, String faculty, int course) {
         this.surname = surname;
+        this.name = name;
+        this.middleName = middleName;
+        this.birthDate = birthDate;
+        this.address = address;
+        this.phone = phone;
+        this.faculty = faculty;
+        this.course = course;
     }
 
-    public String[] getStudentsFaculty1(){
-        int size = studentsFaculty1.length;
-        if(faculty == 1){
-            studentsCourse1 = new String[size++];
-            studentsCourse1[size] = name + "" + surname + "" + middleName;
-            return studentsFaculty1;
-        }
-        return null;
-    }
-    public String[] getStudentsFaculty2(){
-        int size = studentsFaculty2.length;
-        if(faculty == 2){
-            studentsCourse2 = new String[size++];
-            studentsCourse2[size] = name + "" + surname + "" + middleName;
-            return studentsFaculty2;
-        }
-        return null;
-    }
-    public String[] getStudentsFaculty3(){
-        int size = studentsFaculty3.length;
-        if(faculty == 3){
-            studentsCourse3 = new String[size++];
-            studentsCourse3[size] = name + "" + surname + "" + middleName;
-            return studentsFaculty3;
-        }
-        return null;
-    }
-    public String[] getStudentsCourse1(){
-        int size = studentsCourse1.length;
-        if(course == 1){
-            studentsCourse1 = new String[size++];
-            studentsCourse1[size] = name + "" + surname + "" + middleName;
-            return studentsCourse1;
-        }
-        return null;
-    }
-    public String[] getStudentsCourse2(){
-        int size = studentsCourse2.length;
-        if(course == 2){
-            studentsCourse2 = new String[size++];
-            studentsCourse2[size] = name + "" + surname + "" + middleName;
-            return studentsCourse2;
-        }
-        return null;
-    }
-    public String[] getStudentsCourse3(){
-        int size = studentsCourse3.length;
-        if(course == 3){
-            studentsCourse3 = new String[size++];
-            studentsCourse3[size] = name + "" + surname + "" + middleName;
-            return studentsCourse3;
-        }
-        return null;
-    }
-    public String[] getBornAfter(){
-        int size = bornAfter.length;
-        if(yearOfBirth >= 2000){
-            bornAfter = new String[size++];
-            bornAfter[size] = name + "" + surname + "" + middleName;
-            return bornAfter;
-        }
-        return null;
-    }
+
 }
